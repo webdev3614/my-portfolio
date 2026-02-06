@@ -1,5 +1,9 @@
 {
     "dashboard": {
-        "welcome": "Welcome to my Portfolio Website"
+        "welcome": "Welcome to my Portfolio Website",
+        "skills": "skills",
+        "career": "career",
+        "previous_projects": "previous projects",
+        "strong_experience": "{years} years of strong experience"
     }
 }
