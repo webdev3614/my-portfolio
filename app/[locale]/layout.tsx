@@ -2,8 +2,8 @@ import { Layout } from "antd"
 
 const contentStyle: React.CSSProperties = {
     width: "100%",
-    height: "100vh",
-    background: "transparent"
+    background: "transparent",
+    padding: "10px"
 }
 
 export default function HomePageLayout({
