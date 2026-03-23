@@ -35,8 +35,10 @@ const rowStyle: React.CSSProperties = {
 	height: "100%"
 }
 
-const colStyle: React.CSSProperties = {
-	height: "100%"
+/** Flex column so SummaryCard can grow to match the tallest column in the row */
+const summaryColStyle: React.CSSProperties = {
+	display: "flex",
+	flexDirection: "column"
 }
 
 export default function LocalePage() {
@@ -118,7 +120,7 @@ export default function LocalePage() {
 					description: t("coachcare_description")
 				},{
 					image: "images/looter.webp",
-					title: "Looter 11/2024 - 01/2026",
+					title: "Looter 11/2022 - 11/2024",
 					description: t("looter_description")
 				}
 			],
@@ -167,11 +169,11 @@ export default function LocalePage() {
 				</Row>
 			</Content>
 			<Footer style={footerStyle}>
-				<Row gutter={[16,16]} style={rowStyle}>
+				<Row gutter={[16,16]} style={rowStyle} align="stretch">
 					{
 						summaries.map((summary, index) => {
 							return (
-								<Col key={index} sm={24} md={8} style={colStyle}>
+								<Col key={index} sm={24} md={8} style={summaryColStyle}>
 									<SummaryCard {...summary}/>
 								</Col>
 							)
