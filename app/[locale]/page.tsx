@@ -35,6 +35,13 @@ const rowStyle: React.CSSProperties = {
 	height: "100%"
 }
 
+const videoRowStyle: React.CSSProperties = {
+	width: "100%",
+	justifyContent: "center",
+	alignItems: "center",
+	padding: "20px"
+}
+
 /** Flex column so SummaryCard can grow to match the tallest column in the row */
 const summaryColStyle: React.CSSProperties = {
 	display: "flex",
@@ -154,6 +161,7 @@ export default function LocalePage() {
 			bgColor: "var(--background)"
 		}
 	]
+	const intro_video = "video/zhengtian.mp4"
 	return (
 		<>
 			<Content style={contentStyle}>
@@ -179,6 +187,11 @@ export default function LocalePage() {
 							)
 						})
 					}
+				</Row>
+				<Row gutter={[16,16]} style={videoRowStyle}>
+						<video controls>
+							<source src={intro_video}/>
+						</video>
 				</Row>
 			</Footer>
 		</>
